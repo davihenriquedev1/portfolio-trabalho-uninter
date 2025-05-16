@@ -1,0 +1,239 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #0f1b22;
+  }
+  header {
+    background: #0c2741;
+    color: #fff;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+  }
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+  }
+  .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  .nav-links {
+    list-style: none;
+    display: flex;
+    letter-spacing: 2px;
+  }
+  .nav-links li {
+    margin-left: 1rem;
+  }
+  .nav-links a {
+    color: #fff;
+    text-decoration: none;
+  }
+  .nav-toggle {
+    display: none; /* Oculta em desktop */
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 1.5rem;
+  }
+  main {
+    padding: 6rem 1rem 2rem; /* Espaço para o header fixo */
+    max-width: 1100px; 
+    margin: auto;
+    color: #f5f5f5;
+    font-family: 'Courier New', Courier, monospace;
+  }
+  section {
+    max-width: 800px;
+    margin: 0 auto 2rem;
+    border-bottom: 1px solid #174f833b;
+    padding: 20px;
+  }
+  h1 {
+    margin-bottom: 1rem;
+  }
+  section h3 {
+    text-align: center;
+    padding-bottom: 10px;
+  }
+  ul {
+    list-style: none;
+  }
+  #about {
+    display:flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+  }
+  #my-image-box {
+    width: 200px;
+    height: 200px;
+    background-color: #0c2741;
+    border-radius: 50%;
+    overflow: hidden; 
+    box-sizing: border-box;
+    flex-shrink: 0;
+    margin-right: 20px;
+  }
+  #my-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .skills-icons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    padding: 10px 0;
+    justify-content: center;
+  } 
+    
+  .skills-icons i {
+    font-size: 36px;
+    transition: transform 0.3s;
+    cursor: pointer;
+  }
+  
+  .skills-icons i:hover {
+    transform: scale(1.2);
+  }
+  
+  .skills-icons i::after {
+    content: attr(title);
+    position: absolute;
+    bottom: -28px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 12px;
+    white-space: nowrap;
+    color: #fff;
+    background: #333;
+    padding: 4px 8px;
+    border-radius: 4px;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s;
+    z-index: 10;
+  }
+  
+  .skills-icons i:hover::after {
+    opacity: 1;
+  }
+  
+  .social-links {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    padding: 10px 0;
+    list-style: none;
+  }
+  
+  .social-links li a {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 18px;
+    color: #93cbff;
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+  
+  .social-links li a:hover {
+    color: #0077b6;
+  }
+  
+  .education p,li {
+    color: #d8ecff;;
+  }
+  .education h1, h2 {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  #projects-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+    padding: 0;
+    list-style: none;
+  }
+  #projects-list li {
+    padding: 10px;
+    background-color: #12313a; /* opcional, só pra visual */
+    border-radius: 10px;
+    transition: transform 0.2s;
+  }
+  #projects-list li:hover {
+    transform: scale(1.02);
+  }
+  #projects-list li img {
+    width: 100%;
+    height: 50%;
+    object-fit: cover;
+    object-position: top;
+    border-radius: 10px;
+  }
+  #projects-list li a {
+    text-decoration: none;
+    color: #ccc;
+  }
+  .contact-form label {
+    display: block;
+    margin-top: 1rem;
+  }
+  .contact-form input,
+  .contact-form textarea {
+    width: 100%;
+    padding: 0.5rem;
+    margin-top: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  .contact-form button {
+    margin-top: 1rem;
+    padding: 0.75rem 1.5rem;
+    background: #222;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+ 
+  @media (max-width: 768px) {
+    .nav-links {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      background: #222;
+      flex-direction: column;
+      display: none;
+    }
+    .nav-links li {
+      margin: 1rem 0;
+      text-align: center;
+    }
+    .nav-toggle {
+      display: block;
+    }
+    #about {
+        flex-direction: column;
+    }
+    #my-image-box {
+        margin-bottom: 20px;
+    }
+  }
+
+
+
+  
