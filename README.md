@@ -31,4 +31,4 @@ Certifique-se de que o arquivo `script.js` está sendo incluído corretamente em
 
 Feito com 💻 por Davi henrique
 
-Acesse o Github Pages: 
+Acesse o Github Pages: https://davihenriquedev1.github.io/portfolio-trabalho-uninter/
